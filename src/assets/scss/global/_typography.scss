@@ -1,0 +1,77 @@
+h1,
+h2 {
+  letter-spacing: -.03rem;
+  @include breakpoint(medium) {
+    letter-spacing: -.1rem;
+  }
+}
+
+.reverse {
+  background: $black;
+  color: $white;
+  a,
+  ul.menu > li > a {
+    color: $white;
+  }
+  a:hover,
+  ul.menu > li > a:hover {
+    color: $primary-color;
+  }
+}
+
+.button {
+  font-weight: 900;
+}
+
+label {
+  letter-spacing: .02rem;
+}
+
+p.big,
+a.big {
+  color: inherit;
+  font-size: 24px;
+  font-weight: 900;
+  line-height: 1;
+  font-family: $body-font-family;
+  letter-spacing: .05rem;
+  @include breakpoint(medium) {
+    font-size: 36px;
+  }
+}
+
+p.med,
+a.med,
+.document h2 {
+  color: inherit;
+  font-size: 16px;
+  font-weight: 900;
+  line-height: 1.2;
+  font-family: $body-font-family;
+  letter-spacing: .03rem;
+  @include breakpoint(medium) {
+    font-size: 20px;
+  }
+}
+
+.document h1 {
+  margin-bottom: 2rem;
+}
+
+.document h2 {
+  margin-top: 2rem;
+  margin-bottom: 1rem;
+}
+
+.document p {
+  margin-bottom: 1rem;
+}
+
+.document li {
+  margin-left: 2rem;
+}
+
+.document a {
+  font-weight: 900;
+  letter-spacing: 0.03rem;
+}

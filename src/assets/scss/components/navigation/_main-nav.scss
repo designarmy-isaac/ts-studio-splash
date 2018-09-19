@@ -1,0 +1,12 @@
+.menu a {
+  color: $black;
+}
+
+.menu a:hover {
+  color: $dark-gray;
+}
+
+.fixed-nav {
+  position: fixed;
+  width: 100%;
+}

@@ -1,0 +1,66 @@
+[contenteditable="true"]:focus {
+  outline: none;
+  outline-color: transparent;
+  outline-style: none;
+}
+
+.group {
+  position: relative;
+  margin-bottom: 45px;
+}
+.custom-form input[type="text"],
+.custom-form input[type="email"],
+.custom-form input[type="password"],
+.custom-form input[type="date"],
+.custom-form input[type="number"],
+.custom-form input[type="search"],
+.custom-form input[type="url"],
+.custom-form input[type="tel"],
+.custom-form input[type="month"],
+.custom-form select {
+  border: none;
+  border-bottom: 1px solid $white;
+  background: none;
+}
+.custom-form input[type="text"]:focus,
+.custom-form input[type="email"]:focus,
+.custom-form input[type="password"]:focus,
+.custom-form input[type="date"]:focus,
+.custom-form input[type="number"]:focus,
+.custom-form input[type="search"]:focus,
+.custom-form input[type="url"]:focus,
+.custom-form input[type="tel"]:focus,
+.custom-form input[type="month"]:focus,
+.custom-form select:focus {
+  outline: none;
+  border-bottom: 1px solid $primary-color;
+  background: none;
+}
+
+/* LABEL ======================================= */
+
+.custom-form label {
+  color: inherit;
+  font-weight: 900;
+  position: absolute;
+  pointer-events: none;
+  left: 5px;
+  top: 10px;
+  transition: 0.2s ease all;
+  -moz-transition: 0.2s ease all;
+  -webkit-transition: 0.2s ease all;
+}
+
+/* active state */
+
+.custom-form input:focus ~ label {
+  top: -20px;
+  font-size: 14px;
+  color: $primary-color;
+}
+
+.custom-form input.full ~ label {
+  top: -20px;
+  font-size: 14px;
+  color: $primary-color
+}
