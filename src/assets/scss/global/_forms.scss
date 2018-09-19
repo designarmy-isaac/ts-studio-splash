@@ -6,8 +6,9 @@
 
 .group {
   position: relative;
-  margin-bottom: 45px;
+  margin-bottom: rem-calc(45);
 }
+
 .custom-form input[type="text"],
 .custom-form input[type="email"],
 .custom-form input[type="password"],
@@ -37,30 +38,51 @@
   background: none;
 }
 
-/* LABEL ======================================= */
-
 .custom-form label {
   color: inherit;
   font-weight: 900;
   position: absolute;
   pointer-events: none;
-  left: 5px;
-  top: 10px;
+  left: rem-calc(5);
+  top: rem-calc(10);
   transition: 0.2s ease all;
   -moz-transition: 0.2s ease all;
   -webkit-transition: 0.2s ease all;
 }
 
-/* active state */
+/* full state */
+.custom-form input.full ~ label,
+.custom-form select ~ label {
+  top: -1.25rem;
+  font-size: .9rem;
+}
 
-.custom-form input:focus ~ label {
-  top: -20px;
-  font-size: 14px;
+
+/* focused state */
+.custom-form input:focus ~ label,
+.custom-form select:focus ~ label {
+  top: -1.25rem;
+  font-size: .9rem;
   color: $primary-color;
 }
 
-.custom-form input.full ~ label {
-  top: -20px;
-  font-size: 14px;
-  color: $primary-color
+.custom-form .dropdown label {
+  width: 100%;
+}
+
+.custom-form .dropdown label::after {
+  content: "";
+  display: inline-block;
+  position: absolute;
+  top: 2.25rem;
+  right: .5rem;
+  width: 0; 
+  height: 0; 
+  border-left: .4rem solid transparent;
+  border-right: .4rem solid transparent;
+  border-top: .4rem solid $white;
+}
+
+.custom-form .dropdown select:focus ~label::after {
+    border-top: .4rem solid $primary-color;
 }

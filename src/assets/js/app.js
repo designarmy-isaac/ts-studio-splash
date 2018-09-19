@@ -60,10 +60,10 @@ $(".slideshow").slick({
 });
 
 // Form Handling
+let input_selector =
+  'input[type=text], input[type=password], input[type=email], input[type=url], input[type=tel], input[type=number], input[type=search], input[type=date], input[type=time], textarea';
 
 var inputUI = function () {
-  let input_selector =
-    'input[type=text], input[type=password], input[type=email], input[type=url], input[type=tel], input[type=number], input[type=search], input[type=date], input[type=time], textarea';
   let inputs = $(input_selector);
   inputs.each(function(index, el) {
     let $this = $(this);
@@ -71,18 +71,17 @@ var inputUI = function () {
       el.value.length > 0 ||
       $(el).is(':focus') ||
       el.autofocus ||
-      $this.attr('placeholder') !== null
+      $this.attr('placeholder') !== ""
     ) {
-      console.log('did something');
-      $this.siblings('label').addClass('active');
+      console.log('added full to input ' + index);
+      $this.addClass('full');
     } else {
-      console.log('did nothing')
+      console.log('removed full from input ' + index)
+      $this.removeClass('full');
     }
     
 //    else if (el.validity) {
 //      $this.siblings('label').toggleClass('active', el.validity.badInput === true);
-//    } else {
-//      $this.siblings('label').removeClass('active');
 //    }
   });
 }
@@ -90,3 +89,67 @@ var inputUI = function () {
 $(function() {
   inputUI();
 });
+
+/**
+ * Add full when element has focus
+ * @param {Event} e
+ */
+document.addEventListener(
+  'focus',
+  function(e) {
+    if ($(e.target).is(input_selector)) {
+      $(e.target).addClass('full');
+    }
+  },
+  true
+);
+
+/**
+ * Remove full when element is blurred and empty
+ * @param {Event} e
+ */
+document.addEventListener(
+  'blur',
+  function(e) {
+    let $inputElement = $(e.target);
+    if ($inputElement.is(input_selector)) {
+
+      if (
+        $inputElement[0].value.length === 0 &&
+        $inputElement[0].validity.badInput !== true &&
+        $inputElement.attr('placeholder') === null
+      ) {
+        $inputElement.removeClass('full');
+      }
+//      M.validate_field($inputElement);
+    }
+  },
+  true
+);
+
+// HTML DOM FORM RESET handling
+//$(document).on('reset', function(e) {
+//  let formReset = $(e.target);
+//  if (formReset.is('form')) {
+//    formReset
+//      .find(input_selector)
+//      .removeClass('valid')
+//      .removeClass('invalid');
+//    formReset.find(input_selector).each(function(e) {
+//      if (this.value.length) {
+//        $(this)
+//          .removeClass('full');
+//      }
+//    });
+//
+//    // Reset select (after native reset)
+//    setTimeout(function() {
+//      formReset.find('select').each(function() {
+//        // check if initialized
+//        if (this.M_FormSelect) {
+//          $(this).trigger('change');
+//        }
+//      });
+//    }, 0);
+//  }
+//});

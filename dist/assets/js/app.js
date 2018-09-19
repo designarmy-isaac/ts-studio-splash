@@ -14632,23 +14632,22 @@ injector.inject(mySVGsToInject, afterAllInjectionsFinishedCallback, perInjection
 });
 
 // Form Handling
+var input_selector = 'input[type=text], input[type=password], input[type=email], input[type=url], input[type=tel], input[type=number], input[type=search], input[type=date], input[type=time], textarea';
 
 var inputUI = function inputUI() {
-  var input_selector = 'input[type=text], input[type=password], input[type=email], input[type=url], input[type=tel], input[type=number], input[type=search], input[type=date], input[type=time], textarea';
   var inputs = (0, _jquery2.default)(input_selector);
   inputs.each(function (index, el) {
     var $this = (0, _jquery2.default)(this);
-    if (el.value.length > 0 || (0, _jquery2.default)(el).is(':focus') || el.autofocus || $this.attr('placeholder') !== null) {
-      console.log('did something');
-      $this.siblings('label').addClass('active');
+    if (el.value.length > 0 || (0, _jquery2.default)(el).is(':focus') || el.autofocus || $this.attr('placeholder') !== "") {
+      console.log('added full to input ' + index);
+      $this.addClass('full');
     } else {
-      console.log('did nothing');
+      console.log('removed full from input ' + index);
+      $this.removeClass('full');
     }
 
     //    else if (el.validity) {
     //      $this.siblings('label').toggleClass('active', el.validity.badInput === true);
-    //    } else {
-    //      $this.siblings('label').removeClass('active');
     //    }
   });
 };
@@ -14656,6 +14655,58 @@ var inputUI = function inputUI() {
 (0, _jquery2.default)(function () {
   inputUI();
 });
+
+/**
+ * Add full when element has focus
+ * @param {Event} e
+ */
+document.addEventListener('focus', function (e) {
+  if ((0, _jquery2.default)(e.target).is(input_selector)) {
+    (0, _jquery2.default)(e.target).addClass('full');
+  }
+}, true);
+
+/**
+ * Remove full when element is blurred and empty
+ * @param {Event} e
+ */
+document.addEventListener('blur', function (e) {
+  var $inputElement = (0, _jquery2.default)(e.target);
+  if ($inputElement.is(input_selector)) {
+
+    if ($inputElement[0].value.length === 0 && $inputElement[0].validity.badInput !== true && $inputElement.attr('placeholder') === null) {
+      $inputElement.removeClass('full');
+    }
+    //      M.validate_field($inputElement);
+  }
+}, true);
+
+// HTML DOM FORM RESET handling
+//$(document).on('reset', function(e) {
+//  let formReset = $(e.target);
+//  if (formReset.is('form')) {
+//    formReset
+//      .find(input_selector)
+//      .removeClass('valid')
+//      .removeClass('invalid');
+//    formReset.find(input_selector).each(function(e) {
+//      if (this.value.length) {
+//        $(this)
+//          .removeClass('full');
+//      }
+//    });
+//
+//    // Reset select (after native reset)
+//    setTimeout(function() {
+//      formReset.find('select').each(function() {
+//        // check if initialized
+//        if (this.M_FormSelect) {
+//          $(this).trigger('change');
+//        }
+//      });
+//    }, 0);
+//  }
+//});
 
 /***/ }),
 /* 21 */
