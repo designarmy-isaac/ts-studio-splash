@@ -3,13 +3,13 @@
     <div class="grid-x grid-padding-x">
       <div class="cell medium-8 large-7">
         <h2 class="mb3">inquire</h2>
-        <form class="custom-form" action="https://operate-us.essensys.tech/spacecontrol/WebToLead/Contact Us" method="POST">
+        <form data-abide novalidate class="custom-form" action="https://operate-us.essensys.tech/spacecontrol/WebToLead/Contact Us" method="POST">
             <div class="grid-x grid-padding-x">
               <div class="cell medium-6">
                 <input id="wtlhash" name="wtlhash" type="hidden" value="Q3RZFKzyTJ/rpq2l88AlsxThjQUhYie8nfa6QFSDoTo=" />
                 <input id="RecordType" name="RecordType" type="hidden" value="2" />
                 <div class="group">
-                  <input id="FirstName" name="FirstName" type="text" placeholder="" value="Isaac" required/>
+                  <input id="FirstName" name="FirstName" type="text" placeholder="" required/>
                   <label for="FirstName">First Name</label>
                 </div>
 
@@ -24,8 +24,11 @@
                 </div>
 
                 <div class="group">
-                  <input id="EmailAddress" name="EmailAddress" type="text" placeholder="" required/>
+                  <input id="EmailAddress" name="EmailAddress" type="email" placeholder="" pattern="email" required/>
                   <label for="EmailAddress">Work Email Address</label>
+                  <span class="form-error" id="emailError1">
+                    Double-check you've entered a valid email address.
+                  </span>
                 </div>
 
                 <div class="group">

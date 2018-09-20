@@ -111,17 +111,16 @@ document.addEventListener(
 document.addEventListener(
   'blur',
   function(e) {
+    
+    
     let $inputElement = $(e.target);
     if ($inputElement.is(input_selector)) {
-
       if (
         $inputElement[0].value.length === 0 &&
-        $inputElement[0].validity.badInput !== true &&
-        $inputElement.attr('placeholder') === null
+        $inputElement.attr('placeholder') === ""
       ) {
         $inputElement.removeClass('full');
       }
-//      M.validate_field($inputElement);
     }
   },
   true

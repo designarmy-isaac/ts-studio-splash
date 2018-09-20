@@ -14671,13 +14671,12 @@ document.addEventListener('focus', function (e) {
  * @param {Event} e
  */
 document.addEventListener('blur', function (e) {
+
   var $inputElement = (0, _jquery2.default)(e.target);
   if ($inputElement.is(input_selector)) {
-
-    if ($inputElement[0].value.length === 0 && $inputElement[0].validity.badInput !== true && $inputElement.attr('placeholder') === null) {
+    if ($inputElement[0].value.length === 0 && $inputElement.attr('placeholder') === "") {
       $inputElement.removeClass('full');
     }
-    //      M.validate_field($inputElement);
   }
 }, true);
 

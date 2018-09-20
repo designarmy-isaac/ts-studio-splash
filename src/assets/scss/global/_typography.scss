@@ -6,6 +6,26 @@ h2 {
   }
 }
 
+h1 sup,
+h2 sup,
+h3 sup {
+  font-weight: 400;
+  font-family: $body-font-family;
+  font-size: .75rem;
+  position: relative;
+  top: -.75rem;
+  left: -.25rem;
+}
+
+p sup {
+  font-weight: 400;
+  font-family: $body-font-family;
+  font-size: .75rem;
+  position: relative;
+  top: -.25rem;
+  left: -.25rem;
+}
+
 .reverse {
   background: $black;
   color: $white;

@@ -169,6 +169,55 @@
     
           </div>
         </div>
+        
+        <div class="grid-x grid-padding-x">
+          <div class="cell small-6">
+            <img class="brand-shape float-left mt2" alt="" aria-hidden="true" src="http://via.placeholder.com/44x44">
+          </div>
+          <div class="cell small-6">
+            <img class="brand-shape float-left mt6" alt="" aria-hidden="true" src="http://via.placeholder.com/24x60">
+          </div>
+        </div>
+        
+        <div class="grid-x mt4">
+          <div class="cell medium-6">
+    
+            <div class="grid-x grid-padding-x">
+              <div class="cell small-8 medium-offset-2 mb2"> 
+                <h3>Exceptional services</h3>
+                <p class="med">Studio offers a holistic approach to   services allowing you to focus on what you do best. Standard services include, complete IT solutions, concierge service, daily cleaning, mail and package handlings &mdash; and ZO.<sup>&trade;</sup></p>
+              </div>
+              <div class="cell small-4 medium-12">
+                <img alt="Zo Lounge" src="http://via.placeholder.com/570x400">
+              </div>
+              
+              <div class="cell small-6">
+                <img class="brand-shape float-left mt4" alt="" aria-hidden="true" src="http://via.placeholder.com/98x24">
+              </div>
+              <div class="cell small-6">
+                <img class="brand-shape float-right mt6" alt="" aria-hidden="true" src="http://via.placeholder.com/44x88">
+              </div>
+              
+            </div>
+    
+          </div>
+          <div class="cell medium-5 medium-offset-1">
+    
+            <div class="grid-x grid-padding-x">
+              <div class="cell small-3 medium-9 mb4">
+                <img alt="Woman using Zo app" src="http://via.placeholder.com/356x470">
+              </div>
+              <div class="cell small-9"> 
+                <h3>What is ZO.<sup>&trade;</sup>?</h3>
+                <p class="med">Discover on-site and on-demand services that bring work and life together like never before. You get access to everything from food and fitness to education and transportation all at the tap of an app.</p>
+              </div>
+              <div class="cell small-12 medium-3">
+                <img class="brand-shape float-right" alt="" aria-hidden="true" src="http://via.placeholder.com/88x88">
+              </div>
+            </div>
+    
+          </div>
+        </div>
     
       </div>
     
@@ -250,13 +299,13 @@
         <div class="grid-x grid-padding-x">
           <div class="cell medium-8 large-7">
             <h2 class="mb3">inquire</h2>
-            <form class="custom-form" action="https://operate-us.essensys.tech/spacecontrol/WebToLead/Contact Us" method="POST">
+            <form data-abide novalidate class="custom-form" action="https://operate-us.essensys.tech/spacecontrol/WebToLead/Contact Us" method="POST">
                 <div class="grid-x grid-padding-x">
                   <div class="cell medium-6">
                     <input id="wtlhash" name="wtlhash" type="hidden" value="Q3RZFKzyTJ/rpq2l88AlsxThjQUhYie8nfa6QFSDoTo=" />
                     <input id="RecordType" name="RecordType" type="hidden" value="2" />
                     <div class="group">
-                      <input id="FirstName" name="FirstName" type="text" placeholder="" value="Isaac" required/>
+                      <input id="FirstName" name="FirstName" type="text" placeholder="" required/>
                       <label for="FirstName">First Name</label>
                     </div>
     
@@ -271,8 +320,11 @@
                     </div>
     
                     <div class="group">
-                      <input id="EmailAddress" name="EmailAddress" type="text" placeholder="" required/>
+                      <input id="EmailAddress" name="EmailAddress" type="email" placeholder="" pattern="email" required/>
                       <label for="EmailAddress">Work Email Address</label>
+                      <span class="form-error" id="emailError1">
+                        Double-check you've entered a valid email address.
+                      </span>
                     </div>
     
                     <div class="group">
