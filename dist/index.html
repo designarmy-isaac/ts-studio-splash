@@ -5,6 +5,13 @@
     <meta http-equiv="x-ua-compatible" content="ie=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Welcome to Studio</title>
+    
+    <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+    new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+    j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+    'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+    })(window,document,'script','dataLayer','GTM-P8RH6B3');</script>
+
     <link rel="stylesheet" href="assets/css/app.css">
     
     <!--
@@ -46,6 +53,8 @@
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.3.1/css/fontawesome.css" integrity="sha384-1rquJLNOM3ijoueaaeS5m+McXPJCGdr5HcA03/VHXxcp2kX2sUrQDmFc3jR5i/C7" crossorigin="anonymous">    
   </head>
   <body>
+    <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-P8RH6B3"
+height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
     
     <nav class="fixed-nav">
     
@@ -299,24 +308,33 @@
         <div class="grid-x grid-padding-x">
           <div class="cell medium-8 large-7">
             <h2 class="mb3">inquire</h2>
-            <form data-abide novalidate class="custom-form" action="https://operate-us.essensys.tech/spacecontrol/WebToLead/Contact Us" method="POST">
+            <form data-abide novalidate class="custom-form" action="https://operate-us.essensys.tech/spacecontrol/WebToLead/Contact%20Us" method="POST">
                 <div class="grid-x grid-padding-x">
                   <div class="cell medium-6">
                     <input id="wtlhash" name="wtlhash" type="hidden" value="Q3RZFKzyTJ/rpq2l88AlsxThjQUhYie8nfa6QFSDoTo=" />
                     <input id="RecordType" name="RecordType" type="hidden" value="2" />
                     <div class="group">
-                      <input id="FirstName" name="FirstName" type="text" placeholder="" required/>
+                      <input id="FirstName" name="FirstName" type="text" placeholder="" pattern="text" required/>
                       <label for="FirstName">First Name</label>
+                      <span class="form-error" id="emailError1">
+                        Enter your first name.
+                      </span>
                     </div>
     
                     <div class="group">
-                      <input id="LastName" name="LastName" type="text" placeholder="" required/>
+                      <input id="LastName" name="LastName" type="text" placeholder="" pattern="text" required/>
                       <label for="LastName">Last Name</label>
+                      <span class="form-error" id="emailError1">
+                        Enter your last name.
+                      </span>
                     </div>
     
                     <div class="group">
-                      <input id="LeadName" name="LeadName" type="text" placeholder="" required/>
+                      <input id="LeadName" name="LeadName" type="text" placeholder="" pattern="text" required/>
                       <label for="LeadName">Company</label>
+                      <span class="form-error" id="emailError1">
+                        Enter your company.
+                      </span>
                     </div>
     
                     <div class="group">
@@ -328,14 +346,17 @@
                     </div>
     
                     <div class="group">
-                      <input id="NumberOfPeople" name="NumberOfPeople" type="text" placeholder="" required/>
+                      <input id="NumberOfPeople" name="NumberOfPeople" type="text" placeholder="" pattern="text" required/>
                       <label for="NumberOfPeople">Number of People</label>
+                      <span class="form-error" id="emailError1">
+                        Number of people is required (approximate is okay).
+                      </span>
                     </div>
     
                     <div class="group dropdown">
                       <select id="LocationName" name="LocationName" title="Existing System">
                         <option value="0">-- Not Specified --</option>
-                        <option value="1">Studio at Rockefeller Center</option>
+                        <option value="1">Studio at Rock Center</option>
                       </select>
                       <label for="LocationName">Location</label>
                     </div>

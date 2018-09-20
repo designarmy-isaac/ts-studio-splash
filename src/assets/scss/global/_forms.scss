@@ -86,3 +86,9 @@
 .custom-form .dropdown select:focus ~label::after {
     border-top: .4rem solid $primary-color;
 }
+
+.custom-form .form-error {
+  position: absolute;
+  left: .35rem;
+  top: 3rem;
+}
