@@ -14646,9 +14646,16 @@ injector.inject(mySVGsToInject, afterAllInjectionsFinishedCallback, perInjection
 });
 
 (0, _jquery2.default)('[data-reveal]').on('closed.zf.reveal', function () {
-  var modal = (0, _jquery2.default)(this);
+  //  var modal = $(this);
   (0, _jquery2.default)('#inquire-splash').removeClass('open');
 });
+
+if (window.location.href.indexOf('#form-submission-successful') != -1) {
+  _jquery2.default.ajax('form-submission-successful-modal.html').done(function (content) {
+    (0, _jquery2.default)('#instant-modal').html(content).foundation('open');
+  });
+  window.location.hash = "";
+}
 
 // Form Handling
 var input_selector = 'input[type=text], input[type=password], input[type=email], input[type=url], input[type=tel], input[type=number], input[type=search], input[type=date], input[type=time], textarea';

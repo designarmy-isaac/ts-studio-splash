@@ -11,3 +11,10 @@ body,
 .full {
   padding: 0;
 }
+
+.stack-small {
+  @include breakpoint(small down) {
+    width: 100%;
+    
+  }
+}

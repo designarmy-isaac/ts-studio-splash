@@ -75,10 +75,17 @@ $('#special-inquire-button').on('click', function() {
 })
 
 $('[data-reveal]').on('closed.zf.reveal', function () {
-  var modal = $(this);
+//  var modal = $(this);
   $('#inquire-splash').removeClass('open');
 });
 
+if(window.location.href.indexOf('#form-submission-successful') != -1) {
+  $.ajax('form-submission-successful-modal.html').
+    done(function(content) {
+      $('#instant-modal').html(content).foundation('open');
+  });
+  window.location.hash=""; 
+}
 
 // Form Handling
 let input_selector =

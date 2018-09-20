@@ -7,6 +7,11 @@
 }
 
 .fixed-nav {
-  position: fixed;
   width: 100%;
+  height: 0rem;
+  overflow-y: visible;
+  @include breakpoint(medium) {
+    position: fixed;
+    height: auto;
+  }
 }
