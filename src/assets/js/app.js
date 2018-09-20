@@ -59,6 +59,27 @@ $(".slideshow").slick({
 	centerMode: true
 });
 
+// AJAX Modal
+
+$('.reveal-inquire').on('click', function() {
+  $.ajax('inquire-modal.html').
+    done(function(content) {
+      $('#modal').html(content).foundation('open');
+  });
+})
+
+// Inquire Splash
+
+$('#special-inquire-button').on('click', function() {
+  $('#inquire-splash').addClass('open');
+})
+
+$('[data-reveal]').on('closed.zf.reveal', function () {
+  var modal = $(this);
+  $('#inquire-splash').removeClass('open');
+});
+
+
 // Form Handling
 let input_selector =
   'input[type=text], input[type=password], input[type=email], input[type=url], input[type=tel], input[type=number], input[type=search], input[type=date], input[type=time], textarea';

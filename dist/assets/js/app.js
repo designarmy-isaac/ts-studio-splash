@@ -14631,6 +14631,25 @@ injector.inject(mySVGsToInject, afterAllInjectionsFinishedCallback, perInjection
   centerMode: true
 });
 
+// AJAX Modal
+
+(0, _jquery2.default)('.reveal-inquire').on('click', function () {
+  _jquery2.default.ajax('inquire-modal.html').done(function (content) {
+    (0, _jquery2.default)('#modal').html(content).foundation('open');
+  });
+});
+
+// Inquire Splash
+
+(0, _jquery2.default)('#special-inquire-button').on('click', function () {
+  (0, _jquery2.default)('#inquire-splash').addClass('open');
+});
+
+(0, _jquery2.default)('[data-reveal]').on('closed.zf.reveal', function () {
+  var modal = (0, _jquery2.default)(this);
+  (0, _jquery2.default)('#inquire-splash').removeClass('open');
+});
+
 // Form Handling
 var input_selector = 'input[type=text], input[type=password], input[type=email], input[type=url], input[type=tel], input[type=number], input[type=search], input[type=date], input[type=time], textarea';
 

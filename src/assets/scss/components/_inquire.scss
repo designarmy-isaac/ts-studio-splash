@@ -1,51 +1,35 @@
-#inquire-button-container {
+#special-inquire-button {
   position: fixed;
   bottom: 0;
-}
-
-.inquire-button {
+  background: red;
+  width: 1px;
+  height: 1px;
+  overflow: visible;
   cursor: pointer;
-  display: inline-block;
 }
 
 #inquire-text {
   display: inline-block;
-//  position: relative;
-  transform: rotateZ(-90deg) translateX(6.75rem) translateY(-1.2rem);
-  top: -250rem;
+  position: relative;
+  bottom: 500rem;
+  transform: rotateZ(-90deg) translateX(10.5rem) translateY(-1.3rem);
 }
+
+// splash circle is really big, then scaled down so it stays sharp when animating
 
 #inquire-splash {
   width: 500rem;
   height: 500rem;
   background: $black;
   border-radius: 500rem;
-//  margin: 1.5rem;
   transform: scale(0.0033);
   position: relative;
   left: -248em;
-  top: 250em;
+  bottom: 254em;
   transition: .25s;
 }
 
 #inquire-splash.open {
   transform: scale(1);
   transitions: 1s;
-}
-
-.close-modal {
-  position: fixed;
-  bottom: .75rem;
-  left: 0;
-  color: $white !important;
-  transform: rotateZ(-90deg) translateX(4.25rem) translateY(-2rem);
-  &:before {
-    content:"\00d7";
-    color: $white;
-    font-weight: 900;
-    padding-right: 1.5rem;
-    position: relative;
-    top: .5rem;
-    font-size: 3rem;
-  }
 }

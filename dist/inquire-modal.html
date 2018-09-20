@@ -1,76 +1,83 @@
-  <div class="fluid reverse inquire">
+<div class="grid-container">
+  <div class="grid-x grid-padding-x">
+    <div class="cell small-12">
+      <button type="button" data-close aria-label="Close" class="close-modal clear button float-right pr2 pt1">CLOSE</button>
+    </div>
+  </div>
+</div>
+
     <div class="grid-container">
       <div class="grid-x grid-padding-x">
-        <div class="cell medium-8 large-7">
+        <div class="cell medium-8 large-7 mb3">
           <h2 class="mb3">inquire</h2>
           <form data-abide novalidate class="custom-form" action="https://operate-us.essensys.tech/spacecontrol/WebToLead/Contact%20Us" method="POST">
-              <div class="grid-x grid-padding-x">
-                <div class="cell medium-6">
-                  <input id="wtlhash" name="wtlhash" type="hidden" value="Q3RZFKzyTJ/rpq2l88AlsxThjQUhYie8nfa6QFSDoTo=" />
-                  <input id="RecordType" name="RecordType" type="hidden" value="2" />
-                  <div class="group">
-                    <input id="FirstName" name="FirstName" type="text" placeholder="" pattern="text" required/>
-                    <label for="FirstName">First Name</label>
-                    <span class="form-error" id="emailError1">
+            <div class="grid-x grid-padding-x">
+              <div class="cell medium-6">
+                <input id="wtlhash" name="wtlhash" type="hidden" value="Q3RZFKzyTJ/rpq2l88AlsxThjQUhYie8nfa6QFSDoTo=" />
+                <input id="RecordType" name="RecordType" type="hidden" value="2" />
+                <div class="group">
+                  <input id="FirstName" name="FirstName" type="text" placeholder="" pattern="text" required/>
+                  <label for="FirstName">First Name</label>
+                  <span class="form-error" id="firstNameError1">
                       Enter your first name.
                     </span>
-                  </div>
+                </div>
   
-                  <div class="group">
-                    <input id="LastName" name="LastName" type="text" placeholder="" pattern="text" required/>
-                    <label for="LastName">Last Name</label>
-                    <span class="form-error" id="emailError1">
+                <div class="group">
+                  <input id="LastName" name="LastName" type="text" placeholder="" pattern="text" required/>
+                  <label for="LastName">Last Name</label>
+                  <span class="form-error" id="lastNameError1">
                       Enter your last name.
                     </span>
-                  </div>
+                </div>
   
-                  <div class="group">
-                    <input id="LeadName" name="LeadName" type="text" placeholder="" pattern="text" required/>
-                    <label for="LeadName">Company</label>
-                    <span class="form-error" id="emailError1">
+                <div class="group">
+                  <input id="LeadName" name="LeadName" type="text" placeholder="" pattern="text" required/>
+                  <label for="LeadName">Company</label>
+                  <span class="form-error" id="companyNameError1">
                       Enter your company.
                     </span>
-                  </div>
+                </div>
   
-                  <div class="group">
-                    <input id="EmailAddress" name="EmailAddress" type="email" placeholder="" pattern="email" required/>
-                    <label for="EmailAddress">Work Email Address</label>
-                    <span class="form-error" id="emailError1">
+                <div class="group">
+                  <input id="EmailAddress" name="EmailAddress" type="email" placeholder="" pattern="email" required/>
+                  <label for="EmailAddress">Work Email Address</label>
+                  <span class="form-error" id="emailError1">
                       Double-check you've entered a valid email address.
                     </span>
-                  </div>
+                </div>
   
-                  <div class="group">
-                    <input id="NumberOfPeople" name="NumberOfPeople" type="text" placeholder="" pattern="text" required/>
-                    <label for="NumberOfPeople">Number of People</label>
-                    <span class="form-error" id="emailError1">
+                <div class="group">
+                  <input id="NumberOfPeople" name="NumberOfPeople" type="text" placeholder="" pattern="text" required/>
+                  <label for="NumberOfPeople">Number of People</label>
+                  <span class="form-error" id="numberOfPeopleError1">
                       Number of people is required (approximate is okay).
                     </span>
-                  </div>
+                </div>
   
-                  <div class="group dropdown">
-                    <select id="LocationName" name="LocationName" title="Existing System">
-                      <option value="0">-- Not Specified --</option>
-                      <option value="1">Studio at Rock Center</option>
-                    </select>
-                    <label for="LocationName">Location</label>
-                  </div>
+                <div class="group dropdown">
+                  <select id="LocationName" name="LocationName" title="Existing System">
+                    <option value="0">-- Not Specified --</option>
+                    <option value="1">Studio at Rock Center</option>
+                  </select>
+                  <label for="LocationName">Location</label>
+                </div>
   
+              </div>
+              <div class="cell medium-6">
+                <div class="group">
+                  <input id="MobileNo" name="MobileNo" type="text" placeholder="" />
+                  <label for="MobileNo">Phone Number (optional)</label>
                 </div>
-                <div class="cell medium-6">
-                  <div class="group">
-                    <input id="MobileNo" name="MobileNo" type="text" placeholder="" />
-                    <label for="MobileNo">Phone Number (optional)</label>
-                  </div>
-                  <div class="group">
-                    <input id="OtherNeeds" name="OtherNeeds" type="text" placeholder="" />
-                    <label for="OtherNeeds">Questions? (optional)</label>
-                  </div>
-                  
+                <div class="group">
+                  <input id="OtherNeeds" name="OtherNeeds" type="text" placeholder="" />
+                  <label for="OtherNeeds">Questions? (optional)</label>
                 </div>
-                <div class="cell small-12 mt2">
-                  <input type="submit" name="submit" class="button">
-                </div>
+  
+              </div>
+              <div class="cell small-12 mt2">
+                <input type="submit" name="submit" class="button">
+              </div>
             </div>
           </form>
         </div>
@@ -83,8 +90,6 @@
           <h4>General</h4>
           <p>info@yourstudio.com</p>
         </div>
-      
+  
       </div>
     </div>
-    
-  </div>
