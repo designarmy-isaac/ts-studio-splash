@@ -13,8 +13,8 @@ body,
 }
 
 .stack-small {
-  @include breakpoint(small down) {
+  @include breakpoint(small only) {
     width: 100%;
-    
+    display: block;
   }
 }

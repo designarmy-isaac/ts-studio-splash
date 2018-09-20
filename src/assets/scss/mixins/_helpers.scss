@@ -30,6 +30,13 @@
     overflow-y: visible;
   }
   
+  .large-h#{$i} {
+    @include breakpoint(large) {
+      height: $n+rem !important;
+      overflow-y: visible;
+    }
+  }
+  
 }
 
 .h100 {
