@@ -61,6 +61,7 @@ $(".slideshow").slick({
 
 // AJAX Modal
 
+
 $('.reveal-inquire').on('click', function() {
   $.ajax('inquire-modal.html').
     done(function(content) {
@@ -78,14 +79,6 @@ $('[data-reveal]').on('closed.zf.reveal', function () {
 //  var modal = $(this);
   $('#inquire-splash').removeClass('open');
 });
-
-if(window.location.href.indexOf('#form-submission-successful') != -1) {
-  $.ajax('form-submission-successful-modal.html').
-    done(function(content) {
-      $('#instant-modal').html(content).foundation('open');
-  });
-  window.location.hash=""; 
-}
 
 // Form Handling
 let input_selector =
@@ -153,6 +146,17 @@ document.addEventListener(
   },
   true
 );
+
+
+$(function(){
+  if(window.location.href.indexOf('#form-submission-successful') != -1) {
+    $.ajax('form-submission-successful-modal.html').
+      done(function(content) {
+        $('#instant-modal').html(content).foundation('open');
+    });
+    window.location.hash=""; 
+  }
+});
 
 // HTML DOM FORM RESET handling
 //$(document).on('reset', function(e) {
