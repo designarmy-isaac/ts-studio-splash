@@ -9,6 +9,14 @@
     margin-top: $n+rem !important;
   }
 
+  .ml#{$i} {
+    margin-left: $n+rem !important;
+  }
+
+  .mr#{$i} {
+    margin-right: $n+rem !important;
+  }
+
   .pb#{$i} {
     padding-bottom: $n+rem !important;
   }
@@ -20,9 +28,20 @@
   .pr#{$i} {
     padding-right: $n+rem !important;
   }
+  .small-only-pr#{$i} {
+    @include breakpoint(small only) {
+      padding-right: $n+rem !important;
+    }
+  }
 
   .pl#{$i} {
     padding-left: $n+rem !important;
+  }
+
+  .small-only-pl#{$i} {
+    @include breakpoint(small-only) {
+      padding-left: $n+rem !important;
+    }
   }
   
   .h#{$i} {

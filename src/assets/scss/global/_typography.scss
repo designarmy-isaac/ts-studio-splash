@@ -57,6 +57,9 @@ a.big {
   font-family: $body-font-family;
   letter-spacing: .05rem;
   @include breakpoint(medium) {
+    font-size: 32px;
+  }
+  @include breakpoint(large) {
     font-size: 36px;
   }
 }
@@ -74,6 +77,14 @@ a.med,
   @include breakpoint(medium) {
     font-size: 20px;
   }
+}
+
+p.small,
+span.small,
+a.small {
+  letter-spacing: .02rem;
+  line-height: 1.3;
+  font-size: .9rem;
 }
 
 .document h1 {
@@ -96,4 +107,15 @@ a.med,
 .document a {
   font-weight: 900;
   letter-spacing: 0.03rem;
+}
+
+i.fab.fa-facebook-f {
+  @include breakpoint(small only) {
+    position: relative;
+    right: -.15rem;
+  }
+  @include breakpoint(medium) {
+    position: relative;
+    right: .25rem;
+  }
 }

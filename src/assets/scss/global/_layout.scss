@@ -6,6 +6,21 @@ body,
 .body {
   height: 100%;
   background: $white;
+  overflow-x: hidden;
+}
+
+.body,
+.protected-width {
+  @include breakpoint(medium) {
+    padding-right: 1rem;
+    padding-left: 3rem;
+  }
+  @include breakpoint(large) {
+    padding-right: 0;
+  }
+  @include breakpoint(xxlarge) {
+    padding-left: 0;
+  }
 }
 
 .full {
@@ -13,8 +28,19 @@ body,
 }
 
 .stack-small {
-  @include breakpoint(small only) {
-    width: 100%;
-    display: block;
+  width: 100%;
+  display: block;
+  padding-right: 1rem;
+  padding-left: 1rem;
+  @include breakpoint(medium) {
+    width: auto;
+    display: inline-block;
+    &:first-child {
+      padding-left: 0;
+    }
+    &:last-child {
+      padding-right: 0;
+    }
   }
 }
+

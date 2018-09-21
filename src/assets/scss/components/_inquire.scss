@@ -1,7 +1,6 @@
 #special-inquire-button {
   position: fixed;
   bottom: 0;
-  background: red;
   width: 1px;
   height: 1px;
   overflow: visible;
@@ -11,22 +10,29 @@
 #inquire-text {
   display: inline-block;
   position: relative;
-  bottom: 500rem;
-  transform: rotateZ(-90deg) translateX(10.5rem) translateY(-1.3rem);
+  bottom: 300rem;
+  transform: rotateZ(-90deg) translateX(7.5rem) translateY(-1.2rem);
+  @include breakpoint(large) {
+    transform: rotateZ(-90deg) translateX(8.5rem) translateY(-1.4rem);
+  }
 }
 
 // splash circle is really big, then scaled down so it stays sharp when animating
 
 #inquire-splash {
-  width: 500rem;
-  height: 500rem;
+  width: 300rem;
+  height: 300rem;
   background: $black;
-  border-radius: 500rem;
-  transform: scale(0.0033);
-  position: relative;
-  left: -248em;
-  bottom: 254em;
+  border-radius: 300rem;
   transition: .25s;
+  transform: scale(0.004);
+  position: relative;
+  left: -148.25em;
+  bottom: 152em;
+  @include breakpoint(large) {
+    transform: scale(0.005);
+    left: -148em;
+  }
 }
 
 #inquire-splash.open {
