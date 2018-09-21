@@ -17,8 +17,8 @@
   }
   @include breakpoint(medium) {
     position: fixed;
-    bottom: 1.75rem;
-    left: -3.3rem;
+    bottom: 2.25rem;
+    left: -3rem;
     transform: rotateZ(-90deg);
     &:after {
       content: '';
@@ -34,8 +34,8 @@
     }
   }
   @include breakpoint(large) {
-    left: -3.75rem;
-    bottom: 2rem;
+    left: -3.25rem;
+    bottom: 3rem;
     &:before {
       padding-right: 1.25rem;
       top: .5rem;
