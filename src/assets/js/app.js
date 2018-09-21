@@ -50,7 +50,7 @@ $(".slideshow").slick({
   // normal options...
   speed: 1000,
 	autoplay: true,
-	autoplaySpeed: 3000,
+	autoplaySpeed: 2400,
 	cssEase: 'linear',
   fade: true,
   dots: false,
