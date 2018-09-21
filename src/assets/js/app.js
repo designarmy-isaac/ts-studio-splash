@@ -69,6 +69,11 @@ $('.reveal-inquire').on('click', function() {
   });
 })
 
+$('[data-reveal]').on('open.zf.reveal', function () {
+  $(document).foundation();
+});
+
+
 // Inquire Splash
 
 $('#special-inquire-button').on('click', function() {
