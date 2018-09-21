@@ -39,7 +39,7 @@
   }
 
   .small-only-pl#{$i} {
-    @include breakpoint(small-only) {
+    @include breakpoint(small only) {
       padding-left: $n+rem !important;
     }
   }
