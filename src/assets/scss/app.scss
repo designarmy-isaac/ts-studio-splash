@@ -2,7 +2,7 @@
 
 /**
  * @license
- * MyFonts Webfont Build ID 3644092, 2018-09-19T11:15:21-0400
+ * MyFonts Webfont Build ID 3645736, 2018-09-24T10:48:11-0400
  * 
  * The fonts listed in this notice are subject to the End User License
  * Agreement(s) entered into by the website owner. All other parties are 
@@ -22,47 +22,68 @@
  * URL: https://www.myfonts.com/fonts/urw/bernhard-gothic/urw-t-ultra/
  * Copyright: Copyright 2010 URW++ Design &amp; Development Hamburg
  * 
+ * Webfont: BernhardGotURW-Med by URW
+ * URL: https://www.myfonts.com/fonts/urw/bernhard-gothic/t-medium/
+ * Copyright: Copyright 2010 URW++ Design &amp; Development Hamburg
  * 
- * License: https://www.myfonts.com/viewlicense?type=web&buildid=3644092
+ * Webfont: BernhardGotURW-Hea by URW
+ * URL: https://www.myfonts.com/fonts/urw/bernhard-gothic/urw-t-heavy/
+ * Copyright: Copyright 2010 URW++ Design &amp; Development Hamburg
+ * 
+ * 
+ * License: https://www.myfonts.com/viewlicense?type=web&buildid=3645736
  * Licensed pageviews: 100,000
  * 
  * © 2018 MyFonts Inc
 */
 
+@import url("//hello.myfonts.net/count/37a128");
 
-/* @import must be at top of file, otherwise CSS will not work */
-@import url("//hello.myfonts.net/count/379abc");
-
-  
 @font-face {
   font-family: 'CaslonGraphiqueEF';
-  src: url('../webfont/379ABC_0_0.eot');
-  src: url('../webfont/379ABC_0_0.eot?#iefix')format('embedded-opentype'),
-    url('../webfont/379ABC_0_0.woff2') format('woff2'),
-    url('../webfont/379ABC_0_0.woff') format('woff'),
-    url('../webfont/379ABC_0_0.ttf') format('truetype');
+  src: url('../webfont/37A128_0_0.eot');
+  src: url('../webfont/37A128_0_0.eot?#iefix') format('embedded-opentype'),
+    url('../webfont/37A128_0_0.woff2') format('woff2'),
+    url('../webfont/37A128_0_0.woff') format('woff'),
+    url('../webfont/37A128_0_0.ttf') format('truetype');
 }
- 
-  
+
 @font-face {
-  font-family: 'Bernhard Gothic URW';
-  src: url('../webfont/379ABC_1_0.eot');
-  src: url('../webfont/379ABC_1_0.eot?#iefix')format('embedded-opentype'),
-    url('../webfont/379ABC_1_0.woff2') format('woff2'),
-    url('../webfont/379ABC_1_0.woff') format('woff'),
-    url('../webfont/379ABC_1_0.ttf') format('truetype');
-  font-weight: 400;
+  font-family: 'Bernhard Gothic URW'; //Light
+  src: url('../webfont/37A128_1_0.eot');
+  src: url('../webfont/37A128_1_0.eot?#iefix') format('embedded-opentype'), 
+    url('../webfont/37A128_1_0.woff2') format('woff2'), 
+    url('../webfont/37A128_1_0.woff') format('woff'), 
+    url('../webfont/37A128_1_0.ttf') format('truetype');
+    font-weight: normal;
 }
- 
-  
 @font-face {
-  font-family: 'Bernhard Gothic URW';
-  src: url('../webfont/379ABC_2_0.eot');
-  src: url('../webfont/379ABC_2_0.eot?#iefix')format('embedded-opentype'),
-    url('../webfont/379ABC_2_0.woff2') format('woff2'),
-    url('../webfont/379ABC_2_0.woff') format('woff'),
-    url('../webfont/379ABC_2_0.ttf') format('truetype');
+  font-family: 'Bernhard Gothic URW'; //Ultra
+  src: url('../webfonts/37A128_2_0.eot');
+  src: url('webfont/37A128_2_0.eot?#iefix') format('embedded-opentype'), 
+    url('../webfont/37A128_2_0.woff2') format('woff2'), 
+    url('../webfont/37A128_2_0.woff') format('woff'), 
+    url('../webfont/37A128_2_0.ttf') format('truetype');
   font-weight: 900;
+}
+@font-face {
+  font-family: 'Bernhard Gothic URW'; //Medium
+  src: url('../webfont/37A128_3_0.eot');
+  src: url('../webfont/37A128_3_0.eot?#iefix') format('embedded-opentype'), 
+    url('../webfont/37A128_3_0.woff2') format('woff2'), 
+    url('../webfont/37A128_3_0.woff') format('woff'), 
+    url('../webfont/37A128_3_0.ttf') format('truetype');
+  font-weight: 500;
+}
+ 
+@font-face {
+  font-family: 'Bernhard Gothic URW'; //Heavy
+  src: url('../webfont/37A128_4_0.eot');
+  src: url('../webfont/37A128_4_0.eot?#iefix')format('embedded-opentype'),
+    url('../webfont/37A128_4_0.woff2') format('woff2'),
+    url('../webfont/37A128_4_0.woff') format('woff'),
+    url('../webfont/37A128_4_0.ttf') format('truetype');
+  font-weight: bold;
 }
 
 @import 'settings';
