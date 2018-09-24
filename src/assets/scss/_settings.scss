@@ -85,7 +85,8 @@ $black: #0a0a0a;
 $white: #fefefe;
 $body-background: $white;
 $body-font-color: $black;
-$body-font-family: 'Bernhard Gothic URW', 'Helvetica Neue', Helvetica, Arial, sans-serif;
+$body-font-family: 'Plain Light', Helvetica, Arial, sans-serif;
+$accent-font-family: 'Bernhard Gothic URW', 'Helvetica Neue', Helvetica, Arial, sans-serif;
 $body-antialiased: true;
 $global-margin: 1rem;
 $global-padding: 1rem;
@@ -289,7 +290,7 @@ $breadcrumbs-item-separator-color: $medium-gray;
 // 11. Button
 // ----------
 
-$button-font-family: inherit;
+$button-font-family: $accent-font-family;
 $button-padding: 0.75em 1em;
 $button-margin: 0;
 $button-fill: solid;
@@ -431,6 +432,7 @@ $input-prefix-color: inherit;
 $input-prefix-background: inherit;
 $input-prefix-border: 1px solid $medium-gray;
 $input-prefix-padding: 1rem;
+$form-label-font-family: $accent-font-family;
 $form-label-color: inherit;
 $form-label-font-size: rem-calc(16);
 $form-label-font-weight: 900;
@@ -440,7 +442,7 @@ $select-triangle-color: $dark-gray;
 $select-radius: $global-radius;
 $input-color: inherit;
 $input-placeholder-color: $medium-gray;
-$input-font-family: inherit;
+$input-font-family: $body-font-family;
 $input-font-size: rem-calc(16);
 $input-font-weight: $global-weight-normal;
 $input-line-height: $global-lineheight;

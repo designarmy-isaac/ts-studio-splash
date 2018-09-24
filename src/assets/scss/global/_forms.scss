@@ -22,6 +22,7 @@
   border: none;
   border-bottom: 1px solid $white;
   background: none;
+  padding-left: .25rem;
 }
 .custom-form input[type="text"]:focus,
 .custom-form input[type="email"]:focus,
@@ -39,6 +40,7 @@
 }
 
 .custom-form label {
+  font-family: $accent-font-family;
   color: inherit;
   font-weight: 900;
   position: absolute;

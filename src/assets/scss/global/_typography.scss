@@ -13,7 +13,7 @@ h3 sup {
   font-family: $body-font-family;
   font-size: .75rem;
   position: relative;
-  top: -.25rem;
+  top: -.75rem;
   left: -.25rem;
 }
 
@@ -23,7 +23,7 @@ p sup {
   font-size: .75rem;
   position: relative;
   top: -.25rem;
-  left: -.25rem;
+//  left: -.25rem;
 }
 
 .reverse {
@@ -54,7 +54,7 @@ a.big {
   font-size: 24px;
   font-weight: bold;
   line-height: 1;
-  font-family: $body-font-family;
+  font-family: $accent-font-family;
 //  letter-spacing: .05rem;
   @include breakpoint(medium) {
     font-size: 32px;
@@ -70,12 +70,11 @@ a.med,
 .document h2 {
   color: inherit;
   font-size: 16px;
-  font-weight: bold;
-  line-height: 1.2;
+  line-height: 1.375;
   font-family: $body-font-family;
-  letter-spacing: -.01rem;
+//  letter-spacing: -.01rem;
   @include breakpoint(medium) {
-    font-size: 20px;
+    font-size: 16px;
   }
 }
 
