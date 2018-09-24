@@ -56,7 +56,14 @@ $(".slideshow").slick({
   dots: false,
   arrows: false,
   infinite: true,
-	centerMode: true
+	centerMode: true,
+  pauseOnHover: false
+});
+
+// scroll intro animation 
+$(window).scroll(function() {
+  $('.body').removeClass('not-scrolled');
+  $(window).off('scroll');
 });
 
 // AJAX Modal

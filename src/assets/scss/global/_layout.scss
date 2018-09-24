@@ -43,4 +43,88 @@ body,
     }
   }
 }
+//
+//.slick-list,
+//.slick-slide,
+//.slick-track,
+.slide {
+//#hero-slideshow
+  width: 100%;
+  height: 60vw;
+  @include breakpoint(large) {
+    height: 80vh;
+  }
+}
+
+#hero-slideshow {
+  transition: 1s;
+}
+
+.slide {
+  transition: 1s;
+}
+
+.not-scrolled {
+  .slide {
+    transform: scale(200%);
+  }
+  
+//  #hero-slideshow-container {
+//    @include breakpoint(large) {
+//      height: 100vh;
+//    }
+//  }
+//  #hero-slideshow {
+//    @include breakpoint(large) {
+//      position: absolute;
+//      top: 0;
+//      left: 0;
+//      width: 100vw;
+//      height: 100vh;
+//    }
+//    .slick-list,
+//    .slick-slide,
+//    .slick-track,
+//    .slide {
+//        height: 100vh;  
+//    }
+//  }
+}
+
+
+#hero-slide-nyc {
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-image: url(../img/01_nyc.jpg);
+}
+
+#hero-slide-la {
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-image: url(../img/01_la.jpg);
+}
+
+#hero-slide-frankfurt {
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-image: url(../img/01_frankfurt.jpg);
+}
+
+#hero-slide-dc {
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-image: url(../img/01_dc.jpg);
+}
+
+#hero-slide-boston {
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-image: url(../img/01_boston.jpg);
+}
+
 
