@@ -129,10 +129,6 @@ $(function(){
   }
 });
 
-
-
-
-
 // HTML DOM FORM RESET handling
 //$(document).on('reset', function(e) {
 //  let formReset = $(e.target);
