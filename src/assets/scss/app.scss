@@ -57,25 +57,6 @@
     url('../webfont/37A128_1_0.ttf') format('truetype');
     font-weight: normal;
 }
-//@font-face {
-//  font-family: 'Bernhard Gothic URW'; //Ultra
-//  src: url('../webfonts/37A128_2_0.eot');
-//  src: url('webfont/37A128_2_0.eot?#iefix') format('embedded-opentype'), 
-//    url('../webfont/37A128_2_0.woff2') format('woff2'), 
-//    url('../webfont/37A128_2_0.woff') format('woff'), 
-//    url('../webfont/37A128_2_0.ttf') format('truetype');
-//  font-weight: 900;
-//}
-//@font-face {
-//  font-family: 'Bernhard Gothic URW'; //Medium
-//  src: url('../webfont/37A128_3_0.eot');
-//  src: url('../webfont/37A128_3_0.eot?#iefix') format('embedded-opentype'), 
-//    url('../webfont/37A128_3_0.woff2') format('woff2'), 
-//    url('../webfont/37A128_3_0.woff') format('woff'), 
-//    url('../webfont/37A128_3_0.ttf') format('truetype');
-//  font-weight: 500;
-//}
-// 
 @font-face {
   font-family: 'Bernhard Gothic URW'; //Heavy
   src: url('../webfont/37A128_4_0.eot');
@@ -175,29 +156,29 @@
 @include motion-ui-animations;
 
 // vendor styles
-@import 'vendor/aos';
 @import 'vendor/jquery-modal';
-@import "vendor/slick-carousel";
+//@import 'vendor/aos';
+//@import "vendor/slick-carousel";
 //@import "vendor/index-menu";
 
 // mixins
-//@import 'mixins/container-border';
-//@import 'mixins/flex';
-//@import 'mixins/avatar';
 @import 'mixins/helpers';
 @import 'mixins/psuedo';
 @import 'mixins/push-center';
-//@import 'mixins/sidelines';
 @import 'mixins/zindex';
+//@import 'mixins/container-border';
+//@import 'mixins/flex';
+//@import 'mixins/avatar';
+//@import 'mixins/sidelines';
 
 // global styles
 @import 'global/_layout';
 @import 'global/_typography';
 @import 'global/_forms';
 @import 'global/_modal';
+@import 'global/_no-js';
 
 // custom components
 @import 'components/navigation/main-nav';
 @import 'components/inquire';
-
 @import 'components/footer';

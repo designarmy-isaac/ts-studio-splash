@@ -1,0 +1,10 @@
+body.no-js {
+  
+  .custom-form input ~ label { // moves input labels up and out of the way regardless of focus
+  top: -1.25rem;
+  font-size: .9rem;
+  }
+  
+  // make it so inquire buttons don't bring up modal, instead smooth-scroll to inquire at bottom of page
+  
+}
