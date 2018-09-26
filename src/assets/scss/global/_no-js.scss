@@ -5,6 +5,13 @@ body.no-js {
   font-size: .9rem;
   }
   
-  // make it so inquire buttons don't bring up modal, instead smooth-scroll to inquire at bottom of page
+  #no-js-hero-image {
+    opacity: 1;
+  }
   
+  #hero-slideshow {
+    display: none !important;
+  }
+  
+  // make it so inquire buttons don't bring up modal, instead smooth-scroll to inquire at bottom of page
 }

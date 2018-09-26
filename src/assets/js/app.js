@@ -13,29 +13,108 @@ $(document).foundation();
 ==================================================
 */
 
+function sizeLanding() {
+  var windowW = $(window).width(),
+      windowH = $(window).height(),
+      $hero = $('#no-js-hero-image'),
+      heroH = $hero.height(),
+      heroW = $hero.width(),
+      heroX = $hero.offset().left,
+      heroY = $hero.offset().top,
+      $slideshow = $('#hero-slideshow'),
+      $slides = $('.slide');
+  if ( (windowH / windowW) > (heroH / heroW) ) {
+    $slides.css('height', '100%'); //  console.log('window is higher');
+      var slideH = $slides.height();
+    $slides.css('width', (slideH * (heroW / heroH)) );
+  } else {
+    $slides.css('height', 'auto');
+    $slides.css('width', '100%');
+  }
+}
+
+function sizeSlideshow() {
+  var windowW = $(window).width(),
+      windowH = $(window).height(),
+      $hero = $('#no-js-hero-image'),
+      heroH = $hero.height(),
+      heroW = $hero.width(),
+      heroX = $hero.offset().left,
+      heroY = $hero.offset().top,
+      $slideshow = $('#hero-slideshow'),
+      $slides = $('.slide');
+  $slideshow.css('top', heroY); //  console.log('sized slideshow');
+  $slideshow.css('left', heroX);
+  $slideshow.css('bottom', (windowH - heroH - heroY));
+  $slideshow.css('right', (windowW - heroW - heroX));
+  $('.body').removeClass('not-scrolled');
+  $(window).off('scroll');
+}
+
 $(function() {
-  if ($('#hero-slideshow')) {
-    var windowW = $(window).width(),
-        windowH = $(window).height(),
-        $hero = $('#no-js-hero-image'),
-        heroH = $hero.height(),
-        heroW = $hero.width(),
-        heroX = $hero.offset().left,
-        heroY = $hero.offset().top,
-        $slideshow = $('#hero-slideshow'),
-        $slides = $('.slides');
-//    if () SIZE INITLA SLIDESHOW BASED ON WINDOW SIZE
-    $(window).scroll(function() {
-      $slideshow.css('top', heroY);
-      $slideshow.css('left', heroX);
-      $slideshow.css('bottom', (windowH - heroH - heroY));
-      $slideshow.css('right', (windowW - heroW - heroX));
-      $('.body').removeClass('not-scrolled');
-      $(window).off('scroll');
+  
+  if ($('img.wait-for-me').length > 0 ) {
+    setTimeout(function(){
+      $('body').removeClass('fade');
+    }, 5000);
+    Foundation.onImagesLoaded($('img.wait-for-me'), function(){
+      var scrolled = false;
+      $('body').removeClass('fade');
+      
+      if ($('#hero-slideshow')) { //if there is a slideshow
+        sizeLanding(); //Size the slideshow to the browser window
+        $(window).resize(function() { //resize slideshow on window resize
+          if (!scrolled) {
+            sizeLanding(); 
+          } else {
+            sizeSlideshow();
+          }
+        });
+        $(window).scroll(function() { //shrink slideshow on scroll
+          if (!scrolled) {
+            scrolled = true;
+            sizeSlideshow();
+            return scrolled;
+          }
+        });
+        $('.slide').click(function() { //shrink slideshow on click
+          if (!scrolled) {
+            scrolled = true;
+            sizeSlideshow();
+            return scrolled;
+          }
+        });
+      }
     });
+  } else {
+    $('body').removeClass('fade');
   }
 });
 
+
+
+/*
+==================================================
+================================================== Slideshow Animation
+==================================================
+*/
+$(function() {
+  $('#hero-slideshow > .slide:gt(0)').hide();
+  var counter = 0;
+  var nSlides = $('.slide').length; 
+  setInterval(function() {
+    counter++;
+    $('#hero-slideshow > .slide:first')
+      .fadeOut(2000)
+      .next()
+      .fadeIn(2000)
+      .end()
+      .appendTo('#hero-slideshow');
+    if (counter >= nSlides) {
+      sizeSlideshow();
+    }
+  }, 3000);
+});
 
 /*
 ==================================================
