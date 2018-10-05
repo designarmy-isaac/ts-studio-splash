@@ -13,6 +13,13 @@ $(document).foundation();
 ==================================================
 */
 
+function positionVideo() {
+  var windowH = $(window).height(),
+      videoH = $('#landing-video').height(),
+      offset = (windowH - videoH) / 2 - 60;
+  $('#landing-video').css('top', offset);
+}
+
 function sizeLanding() {
   var windowW = $(window).width(),
       windowH = $(window).height(),
@@ -53,22 +60,21 @@ function sizeSlideshow() {
 
 $(function() {
   
-  if ($('img.wait-for-me').length > 0 ) {
+  if ($('.wait-for-me').length > 0 ) {
     setTimeout(function(){
       $('body').removeClass('fade');
     }, 5000);
-    Foundation.onImagesLoaded($('img.wait-for-me'), function(){
+    Foundation.onImagesLoaded($('.wait-for-me'), function(){
       var scrolled = false;
+      positionVideo();
       $('body').removeClass('fade');
-      
       if ($('#hero-slideshow')) { //if there is a slideshow
         sizeLanding(); //Size the slideshow to the browser window
         $(window).resize(function() { //resize slideshow on window resize
           if (!scrolled) {
-            sizeLanding(); 
-          } else {
-            sizeSlideshow();
+            positionVideo();
           }
+          sizeSlideshow();
         });
         $(window).scroll(function() { //shrink slideshow on scroll
           if (!scrolled) {
@@ -110,10 +116,12 @@ $(function() {
       .fadeIn(2000)
       .end()
       .appendTo('#hero-slideshow');
-    if (counter >= nSlides) {
+    if (counter == 1) {
+      $('#landing-logo-animation').fadeOut(500);
+//      remove();
       sizeSlideshow();
     }
-  }, 3000);
+  }, 4000);
 });
 
 /*
