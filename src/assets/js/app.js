@@ -56,7 +56,8 @@ $(".slideshow").slick({
   dots: false,
   arrows: false,
   infinite: true,
-	centerMode: true
+	centerMode: true,
+  pauseOnHover: false
 });
 
 // AJAX Modal
