@@ -1,6 +1,9 @@
 .DS_Store
 .ds_store
 .DS_store
+*.DS_store
+*.DS_Store
+*.ds_store
 
 # Logs
 logs
