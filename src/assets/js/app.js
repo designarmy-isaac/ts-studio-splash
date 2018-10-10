@@ -55,7 +55,6 @@ function sizeSlideshow() {
   $slideshow.css('bottom', (windowH - heroH - heroY));
   $slideshow.css('right', (windowW - heroW - heroX));
   $('.body').removeClass('not-scrolled');
-  $(window).off('scroll');
 }
 
 $(function() {
@@ -97,6 +96,33 @@ $(function() {
   }
 });
 
+
+
+/*
+==================================================
+================================================== Reveal top bar logo after scrolling past hero logo
+==================================================
+*/
+
+$(function() {
+  if ( $('#no-js-hero-image') ) {
+  var $nav = $('#nav-bar'),
+      $logo = $('.logo'),
+      $hero = $('#no-js-hero-image');
+
+    $nav.addClass('hidden');
+
+  $(window).scroll(function() {
+    var logoY = $logo.offset().top,
+        heroY = $hero.offset().top;
+    if ( logoY < (heroY + 250) ) {
+      $nav.addClass('hidden');
+    } else {
+      $nav.removeClass('hidden');
+    }
+  });
+  }
+});
 
 
 /*

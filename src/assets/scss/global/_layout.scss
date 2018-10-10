@@ -54,6 +54,16 @@ body.fade {
   transition: none;
 }
 
+#nav-bar {
+  opacity: 1;
+  transition: .5s;
+}
+
+#nav-bar.hidden {
+  opacity: 0;
+  transition: 0;
+}
+
 #no-js-hero-image {
   opacity: 0;
 }
@@ -69,11 +79,10 @@ body.fade {
   background: $black;
   opacity: 0;
   transition: 1s;
-  z-index: -9999;
+  
 }
 
 #landing-video {
-  z-index: -9998;
   position: absolute;
   top: 0;
   left: 0;
@@ -84,7 +93,7 @@ body.fade {
   padding: 0;
   margin: 0;
   transition: 1s;
-  transform: translateY(-500px);
+//  transform: translateY(-50px);
 }
 
 
@@ -95,7 +104,7 @@ body.fade {
   }
   #landing-video {
     z-index: 6001;
-    transform: translateY(0);
+//    transform: translateY(0);
     transition: 0;
   }
 }
@@ -110,7 +119,6 @@ body.fade {
   text-align: center;
   background: $white;
 }
-
 .landing-logo {
   position: absolute;
   top: 25%;
@@ -121,7 +129,7 @@ body.fade {
   z-index: 1005;
 //  transform: scale(.8) translateY(-500px);
   transform: scale(1) translateY(0);
-  transition: 1s;
+  transition: 2s;
 }
 .slide {
   position: absolute;
