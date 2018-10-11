@@ -46,7 +46,7 @@ body,
 
 body {
   opacity: 1;
-  transition: 1s opacity;
+  transition: opacity 1s;
 }
 
 body.fade {
@@ -56,12 +56,12 @@ body.fade {
 
 #nav-bar {
   opacity: 1;
-  transition: .5s;
+  transition: opacity .5s ease-in-out 0;
 }
 
 #nav-bar.hidden {
   opacity: 0;
-  transition: 0;
+  transition: opacity 0 ease-in-out 0;
 }
 
 #no-js-hero-image {
@@ -76,9 +76,12 @@ body.fade {
   right: 0;
   height: 100%;
   width: 100%;
-  background: $black;
+  background: #000;
   opacity: 0;
-  transition: .25s;
+  -webkit-transition: all .5s ease-in-out .5s;
+  -moz-transition: all .5s ease-in-out .5s;
+  -o-transition: all .5s ease-in-out .5s;
+  transition: all .5s ease-in-out .5s;
   display: none;
   @include breakpoint(large) {
     display: block;
@@ -95,9 +98,11 @@ body.fade {
   object-fit: cover;
   padding: 0;
   margin: 0;
-  transition: .25s;
-//  transform: translateY(-50px);
-
+  opacity: 0;
+  -webkit-transition: all .5s ease-in-out 0;
+  -moz-transition: all .5s ease-in-out 0;
+  -o-transition: all .5s ease-in-out 0;
+  transition: all .5s ease-in-out 0;
 }
 
 
@@ -108,7 +113,7 @@ body.fade {
   }
   #landing-video {
     z-index: 6001;
-//    transform: translateY(0);
+    opacity: 1;
     transition: 0;
   }
 }
@@ -119,7 +124,10 @@ body.fade {
   left: 0;
   right: 0;
   z-index: 0;
-  transition: .5s;
+  -webkit-transition: all .5s ease-in-out .5s;
+  -moz-transition: all .5s ease-in-out .5s;
+  -o-transition: all .5s ease-in-out .5s;
+  transition: all .5s ease-in-out .5s;
   text-align: center;
   background: $white;
 }
