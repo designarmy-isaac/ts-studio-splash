@@ -78,7 +78,7 @@ body.fade {
   width: 100%;
   background: $black;
   opacity: 0;
-  transition: 1s;
+  transition: .25s;
   display: none;
   @include breakpoint(large) {
     display: block;
@@ -95,7 +95,7 @@ body.fade {
   object-fit: cover;
   padding: 0;
   margin: 0;
-  transition: 1s;
+  transition: .25s;
 //  transform: translateY(-50px);
 
 }
