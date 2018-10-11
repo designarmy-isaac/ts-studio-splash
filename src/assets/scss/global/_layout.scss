@@ -79,7 +79,10 @@ body.fade {
   background: $black;
   opacity: 0;
   transition: 1s;
-  
+  display: none;
+  @include breakpoint(large) {
+    display: block;
+  }
 }
 
 #landing-video {
@@ -94,6 +97,7 @@ body.fade {
   margin: 0;
   transition: 1s;
 //  transform: translateY(-50px);
+
 }
 
 
