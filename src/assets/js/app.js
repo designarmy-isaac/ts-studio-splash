@@ -169,7 +169,8 @@ $('.reveal-inquire').on('click', function() {
 })
 
 $('[data-reveal]').on('open.zf.reveal', function () {
-  $(document).foundation();
+  $(document).foundation(); // reinitialize foundation for form validation
+  _ictt.push(['_allocate']); // reallocate Infitiny tracking for dymanic phone number
 });
 
 
