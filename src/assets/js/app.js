@@ -58,8 +58,7 @@ function sizeSlideshow() {
 }
 
 $(function() {
-  
-  if ($('.wait-for-me').length > 0 ) {
+  if ($('.wait-for-me').length > 0) {
     setTimeout(function(){
       $('body').removeClass('fade');
     }, 5000);
@@ -93,6 +92,10 @@ $(function() {
     });
   } else {
     $('body').removeClass('fade');
+  }
+  if (window.location.href.indexOf('#') != -1) {
+    $('#landing-video-container').remove();
+    sizeSlideshow();
   }
 });
 
