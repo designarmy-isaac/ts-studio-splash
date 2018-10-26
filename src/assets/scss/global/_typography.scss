@@ -121,13 +121,3 @@ a.num {
   letter-spacing: 0.03rem;
 }
 
-i.fab.fa-facebook-f {
-  @include breakpoint(small only) {
-    position: relative;
-    right: -.15rem;
-  }
-  @include breakpoint(medium) {
-    position: relative;
-    right: .25rem;
-  }
-}
