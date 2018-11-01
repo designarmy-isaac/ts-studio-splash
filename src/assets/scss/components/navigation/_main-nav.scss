@@ -23,8 +23,8 @@
   width: 2rem;
   text-align: center;
   &:last-child {
-    @include breakpoint(small-only) {
-      margin-right: 1.5rem;
+    @include breakpoint(small only) {
+      margin-right: .75rem;
     }
   }
 }

@@ -99,6 +99,14 @@ a.num {
 }
 
 
+a.secondary-anchor {
+  color: $secondary-color;
+  text-decoration: underline;
+  &:hover {
+    color: scale-color($secondary-color, $lightness: +14%);
+  }
+}
+
 .document h1 {
   margin-bottom: 2rem;
 }
