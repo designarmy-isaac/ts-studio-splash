@@ -98,7 +98,6 @@ a.num {
   letter-spacing: -.03rem;
 }
 
-
 a.secondary-anchor {
   color: $secondary-color;
   text-decoration: underline;
@@ -129,3 +128,10 @@ a.secondary-anchor {
   letter-spacing: 0.03rem;
 }
 
+.beverly-hills.button {
+  color: $white;
+  &:hover,
+  &:active {
+    color: $white;
+  }
+}
