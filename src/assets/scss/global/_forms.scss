@@ -89,8 +89,17 @@
     border-top: .4rem solid $primary-color;
 }
 
+.custom-form .dropdown option {
+  color: $black;
+}
+
 .custom-form .form-error {
   position: absolute;
   left: .35rem;
   top: 3rem;
+}
+
+.is-invalid-input:not(:focus) {
+  background: none;
+  border-bottom-color: $white;
 }

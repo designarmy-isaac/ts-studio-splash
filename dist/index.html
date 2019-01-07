@@ -54,7 +54,7 @@
       src="https://www.facebook.com/tr?id=335356650557234&ev=PageView&noscript=1"
     /></noscript>
 
-    <link rel="stylesheet" href="assets/css/app.00c77ff2.css">
+    <link rel="stylesheet" href="assets/css/app.a2e5d560.css">
     
     <!--
     /**
@@ -342,7 +342,7 @@
           <div class="cell small-8 medium-6 large-5 mb2">
             <h2>Rockefeller<br>Center,&nbsp;NYC</h2>
             <p class="med">Find your workspace at an historic landmark. With more than 100 retail shops and restaurants, seven major New York City attractions and nine subway stations nearby, Rockefeller Center is a hub for shopping, dining and culture. </p>
-            <button type="button" class="button reveal-inquire">inquire</button>
+            <button type="button" class="button reveal-inquire" data-location="rock-center">inquire</button>
           </div>
         </div>
       </div>
@@ -353,7 +353,7 @@
           <div class="cell small-5 small-offset-2 medium-4 medium-offset-2">
             <h2>Beverly<br>Hills, LA</h2>
     <!--        <p class="med">Coming Soon</p>-->
-            <button type="button" class="beverly-hills button reveal-inquire">inquire</button>
+            <button type="button" class="beverly-hills button reveal-inquire" data-location="beverly-hills">inquire</button>
           </div>
           <div class="cell small-4 medium-4">
             <img alt="Los Angeles" src="assets/img/09_beverly_hills.42b5f4a0.jpg" srcset="assets/img/09_beverly_hills@2x.76d34342.jpg 2x">
@@ -459,17 +459,20 @@
                       <input id="NumberOfPeople" name="NumberOfPeople" type="text" placeholder="" pattern="text" required/>
                       <label for="NumberOfPeople">Number of People</label>
                       <span class="form-error" id="numberOfPeopleError1">
-                          Number of people is required (approximate is okay).
-                        </span>
+                        Number of people is required (approximate is okay).
+                      </span>
                     </div>
       
                     <div class="group dropdown">
-                      <select id="LocationName" name="LocationName" title="Existing System">
-                        <option value="0"> Not Specified </option>
-                        <option value="1">Studio at Rock Center</option>
-                        <option value="4">Studio at Beverly Hills</option>
+                      <select id="LocationName" name="LocationName" title="Existing System" required>
+                        <option value="" selected="selected">–</option>
+                        <option data-location-option="rock-center" value="1">Studio at Rock Center</option>
+                        <option data-location-option="beverly-hills" value="4">Studio at Beverly Hills</option>
                       </select>
                       <label for="LocationName">Location</label>
+                      <span class="form-error" id="locationError1">
+                        Choose a location.
+                      </span>
                     </div>
       
                   </div>
@@ -529,6 +532,6 @@
           </div>
         </div>
       </div>
-    </footer>    <script src="assets/js/app.dfa69f88.js"></script>
+    </footer>    <script src="assets/js/app.b38d5ed8.js"></script>
   </body>
 </html>

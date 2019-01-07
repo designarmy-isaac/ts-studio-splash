@@ -51,17 +51,20 @@
                   <input id="NumberOfPeople" name="NumberOfPeople" type="text" placeholder="" pattern="text" required/>
                   <label for="NumberOfPeople">Number of People</label>
                   <span class="form-error" id="numberOfPeopleError1">
-                      Number of people is required (approximate is okay).
-                    </span>
+                    Number of people is required (approximate is okay).
+                  </span>
                 </div>
   
                 <div class="group dropdown">
-                  <select id="LocationName" name="LocationName" title="Existing System">
-                    <option value="0"> Not Specified </option>
-                    <option value="1">Studio at Rock Center</option>
-                    <option value="4">Studio at Beverly Hills</option>
+                  <select id="LocationName" name="LocationName" title="Existing System" required>
+                    <option value="" selected="selected">–</option>
+                    <option data-location-option="rock-center" value="1">Studio at Rock Center</option>
+                    <option data-location-option="beverly-hills" value="4">Studio at Beverly Hills</option>
                   </select>
                   <label for="LocationName">Location</label>
+                  <span class="form-error" id="locationError1">
+                    Choose a location.
+                  </span>
                 </div>
   
               </div>

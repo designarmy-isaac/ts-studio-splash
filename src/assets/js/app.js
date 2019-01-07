@@ -176,8 +176,8 @@ $(document).on('click', 'a[href^="#section"]', function (event) {
 ==================================================
 */ 
 
-
 $('.reveal-inquire').on('click', function() {
+  $(this).attr("data-origin", "true");
   $.ajax('inquire-modal.html').
     done(function(content) {
       $('#modal').html(content).foundation('open');
@@ -185,11 +185,13 @@ $('.reveal-inquire').on('click', function() {
 })
 
 $('[data-reveal]').on('open.zf.reveal', function () {
-  $(document).foundation(); // reinitialize foundation for form validation
   _ictt.push(['_allocate']); // reallocate Infitiny tracking for dymanic phone number
+  $(document).foundation(); // reinitialize foundation for form validation
+  var dataLocation = $('[data-origin="true"]').data("location"); //grabs the location value from the button that originated the modal opening
+  $("[data-location-option='" + dataLocation + "']").prop("selected", "selected");
+  $('[data-origin="true"]').attr("data-origin", "false"); // reset originating button
 });
-
-
+  
 /*
 ==================================================
 ================================================== Inquire Splash
@@ -203,6 +205,7 @@ $('#special-inquire-button').on('click', function() {
 $('[data-reveal]').on('closed.zf.reveal', function () {
 //  var modal = $(this);
   $('#inquire-splash').removeClass('open');
+  $('option[value=""]').prop("selected", "selected");
 });
 
 /*
@@ -263,32 +266,33 @@ $(function(){
   }
 });
 
+
 // HTML DOM FORM RESET handling
-//$(document).on('reset', function(e) {
-//  let formReset = $(e.target);
-//  if (formReset.is('form')) {
-//    formReset
-//      .find(input_selector)
-//      .removeClass('valid')
-//      .removeClass('invalid');
-//    formReset.find(input_selector).each(function(e) {
-//      if (this.value.length) {
-//        $(this)
-//          .removeClass('full');
-//      }
-//    });
-//
-//    // Reset select (after native reset)
-//    setTimeout(function() {
-//      formReset.find('select').each(function() {
-//        // check if initialized
-//        if (this.M_FormSelect) {
-//          $(this).trigger('change');
-//        }
-//      });
-//    }, 0);
-//  }
-//});
+$(document).on('reset', function(e) {
+  let formReset = $(e.target);
+  if (formReset.is('form')) {
+    formReset
+      .find(input_selector)
+      .removeClass('valid')
+      .removeClass('invalid');
+    formReset.find(input_selector).each(function(e) {
+      if (this.value.length) {
+        $(this)
+          .removeClass('full');
+      }
+    });
+
+    // Reset select (after native reset)
+    setTimeout(function() {
+      formReset.find('select').each(function() {
+        // check if initialized
+        if (this.M_FormSelect) {
+          $(this).trigger('change');
+        }
+      });
+    }, 0);
+  }
+});
 
 //libs.AOS.init();
 //
