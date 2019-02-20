@@ -1,3 +1,18 @@
+.language-bar {
+  z-index: z(nav);
+  font-size: 80%;
+  opacity: .3;
+  text-align: right;
+  a {
+    text-decoration: underline;
+    color: $black;
+  }
+  a, strong {
+    padding: .5rem .25rem .25rem;
+    display: inline-block;
+  }
+}
+
 .menu a {
   color: $black;
 }

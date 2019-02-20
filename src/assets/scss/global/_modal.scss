@@ -42,3 +42,27 @@
     }
   }
 }
+
+.close-modal.de {
+  &:after {
+    padding-left: .5rem;
+    top: .7rem;
+  }
+  @include breakpoint(medium) {
+    bottom: 4.25rem;
+    left: -4.4rem;
+    &:before {
+      padding-right: .5rem;
+      position: relative;
+      top: .6rem;
+    }
+  }
+  @include breakpoint(large) {
+    left: -5rem;
+    bottom: 4.8rem;
+    &:before {
+      padding-right: 1.25rem;
+      top: .5rem;
+    }
+  }
+}

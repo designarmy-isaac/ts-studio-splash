@@ -1,0 +1,41 @@
+<!doctype html>
+<html class="no-js" lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta http-equiv="x-ua-compatible" content="ie=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{{meta-title}}</title>
+    <meta name="keywords" content="{{meta-keywords}}">
+    <meta name="author" content="Studio" />
+    <meta name="description" content="{{meta-description}}">
+    <meta property="og:title" content="{{og-title}}" />
+    <meta property="og:description" content="{{og-description}}" />
+    <meta property="og:image" content="{{og-image}}" />
+    <meta property="og:url" content="http://www.yourstudio.com" />
+    <meta property="og:locale" content="en_US" />
+    <meta property="og:type" content="website" />
+    <meta property="og:site_name" content="Studio" />
+    
+    <meta name="google-site-verification" content="42CKxyIKV7aRQe-0HRnc1xsBQJGDpCg0ETaN8z-B-OQ" />
+    
+    
+    {{> analytics}}
+
+    <link rel="stylesheet" href="{{root}}assets/css/app.css">
+    
+    {{> webfonts}}
+    
+  </head>
+  <body class="no-js">
+    <script>document.body.className += ' fade'</script>
+    {{> no-script-analytics}}
+    
+    {{> main-nav-de}}
+    {{> body}}
+    <div class="fluid reverse footer-form form-container protected-width">
+      {{> inquire-de}}
+    </div>
+    {{> footer-nav}}
+    <script src="{{root}}assets/js/app.js"></script>
+  </body>
+</html>

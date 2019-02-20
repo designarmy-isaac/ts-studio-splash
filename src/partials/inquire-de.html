@@ -1,0 +1,100 @@
+  <div class="grid-container pt2"> 
+    <div class="grid-x grid-padding-x">
+      <div class="cell small-only-pr1 small-only-pl1 medium-pr0 large-7 mb3">
+        <h2 class="mb3">Anfragen</h2>
+        <form data-abide novalidate class="custom-form" action="https://operate-us.essensys.tech/spacecontrol/WebToLead/Contact%20Us" method="POST">
+          <div class="grid-x grid-padding-x">
+            <div class="cell medium-6">
+              <input id="wtlhash" name="wtlhash" type="hidden" value="2ouIcpvYxw/WIJSdynHuwA==" />
+              <input id="RecordType" name="RecordType" type="hidden" value="2" />
+              <div class="group">
+                <input id="FirstName" name="FirstName" type="text" placeholder="" pattern="text" required/>
+                <label for="FirstName">Vorname</label>
+                <span class="form-error" id="firstNameError1">
+                    Geben Sie Ihren Vornamen ein.
+                  </span>
+              </div>
+
+              <div class="group">
+                <input id="LastName" name="LastName" type="text" placeholder="" pattern="text" required/>
+                <label for="LastName">Nachname</label>
+                <span class="form-error" id="lastNameError1">
+                    Geben Sie Ihren Nachnamen ein.
+                  </span>
+              </div>
+
+              <div class="group">
+                <input id="LeadName" name="LeadName" type="text" placeholder="" pattern="text" required/>
+                <label for="LeadName">Unternehmen</label>
+                <span class="form-error" id="companyNameError1">
+                    Geben Sie Ihr Unternehmen ein.
+                  </span>
+              </div>
+
+              <div class="group">
+                <input id="EmailAddress" name="EmailAddress" type="email" placeholder="" pattern="email" required/>
+                <label for="EmailAddress">E-Mail-Adresse</label>
+                <span class="form-error" id="emailError1">&Uuml;berpr&uuml;fen Sie, ob Sie eine g&uuml;ltige E-Mail-Adresse eingegeben haben.</span>
+              </div>
+
+              <div class="group">
+                <input id="NumberOfPeople" name="NumberOfPeople" type="text" placeholder="" pattern="text" required/>
+                <label for="NumberOfPeople">Personenanzahl</label>
+                <span class="form-error" id="numberOfPeopleError1">
+                  Personenanzahl ist erforderlich (Schätzwert ist in Ordnung).
+                </span>
+              </div>
+
+              <div class="group dropdown">
+                <select id="LocationName" name="LocationName" title="Existing System" required>
+                  <option value="" selected="selected">–</option>
+                  <option data-location-option="rockcenter" value="1">Studio im Rock Center</option>
+                  <option data-location-option="beverlyhills" value="4">Studio at Beverly Hills</option>
+<!--                  <option data-location-option="taunusturm" value="5">Studio in TaunusTurm</option>-->
+                  <option data-location-option="boston" value="6">Studio in 125 High</option>
+                </select>
+                <label for="LocationName">Standort</label>
+                <span class="form-error" id="locationError1">
+                  Wählen Sie einen Standort.
+                </span>
+              </div>
+
+            </div>
+            <div class="cell medium-6">
+              <div class="group">
+                <input id="MobileNo" name="MobileNo" type="text" placeholder=""/>
+                <label for="MobileNo">Telefonnummer (optional)</label>
+              </div>
+              <div class="group">
+                <input id="OtherNeeds" name="OtherNeeds" type="text" placeholder=""/>
+                <label for="OtherNeeds">Fragen? (optional)</label>
+              </div>
+
+            </div>
+            <div class="cell small-12 mt2">
+              <input type="submit" name="submit" class="button" value="Senden">
+            </div>
+          </div>
+        </form>
+      </div>
+      <div class="cell small-only-pr1 small-only-pl1 medium-12 large-4 large-offset-1">
+        <h2 class="mb3">Kontaktieren Sie uns</h2>
+        <div class="grid-x">
+          <div class="cell small-12 medium-4 large-12">
+            <h4>Allgemein</h4>
+            <p><a class="tag-info-email-address" href="mailto:info@yourstudio.com">info@yourstudio.com</a><br>
+              <span class="InfinityNumber">2125230850</span></p>
+          </div>
+          <div class="cell small-12 medium-4 large-12">
+            <h4>Makler</h4>
+            <p><a class="tag-broker-email-address" href="mailto:brokers@yourstudio.com">brokers@yourstudio.com</a></p>
+          </div>
+          <div class="cell small-12 medium-4 large-12">
+            <h4>Karriere</h4>
+            <p><a href="mailto:careers@yourstudio.com">careers@yourstudio.com</a></p>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </div>

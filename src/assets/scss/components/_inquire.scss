@@ -15,6 +15,12 @@
   @include breakpoint(large) {
     transform: rotateZ(-90deg) translateX(8.5rem) translateY(-1.4rem);
   }
+  &.de {
+    transform: rotateZ(-90deg) translateX(8.5rem) translateY(-2.2rem);
+    @include breakpoint(large) {
+      transform: rotateZ(-90deg) translateX(9.5rem) translateY(-2.4rem);
+    }
+  }
 }
 
 // splash circle is really big, then scaled down so it stays sharp when animating
