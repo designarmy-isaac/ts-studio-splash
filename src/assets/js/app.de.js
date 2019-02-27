@@ -323,8 +323,8 @@ document.addEventListener(
 //  },true);
 
 $(function(){
-  if(window.location.href.indexOf('#form-submission-successful-de') != -1) {
-    $.ajax('form-submission-successful-modal-de.html').
+  if(window.location.href.indexOf('/de/#form-submission-successful') != -1) {
+    $.ajax('form-submission-successful-modal.html').
       done(function(content) {
         $('#instant-modal').html(content).foundation('open');
     });
