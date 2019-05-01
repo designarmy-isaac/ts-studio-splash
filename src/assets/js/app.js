@@ -178,7 +178,7 @@ $(document).on('click', 'a[href^="#section"]', function (event) {
 
 $('.reveal-inquire').on('click', function() {
   $(this).attr("data-origin", "true");
-  $.ajax('inquire-modal.html').
+  $.ajax('inquire-modal-2.html').
     done(function(content) {
       $('#modal').html(content).foundation('open');
   });
@@ -187,8 +187,12 @@ $('.reveal-inquire').on('click', function() {
 $('[data-reveal]').on('open.zf.reveal', function () {
   _ictt.push(['_allocate']); // reallocate Infitiny tracking for dymanic phone number
   $(document).foundation(); // reinitialize foundation for form validation
+  $(document).on("formvalid.zf.abide", function(ev,frm) {pushSubmit();});
   var dataLocation = $('[data-origin="true"]').data("location"); //grabs the location value from the button that originated the modal opening
-  $("[data-location-option='" + dataLocation + "']").prop("selected", "selected");
+  selectionListener();
+  var selectedLocation = $("[data-location-option='" + dataLocation + "']");
+  selectedLocation.prop("selected", "selected"); // set location to selected
+  pushSelection(selectedLocation.first().text()); // push to data layer
   $('[data-origin="true"]').attr("data-origin", "false"); // reset originating button
 });
   
@@ -279,6 +283,48 @@ document.addEventListener(
   },
   true
 );
+
+    
+  // Change the CSS selector in the parenthesis to match your select menu
+//  var selectMenu = $('select');
+
+//  var callback = function(e) {
+//    var selectedOption = e.target.options[e.target.selectedIndex];
+//  selectMenu.addEventListener('change', callback, true);
+/**
+ * Add listener to location select so GTM can track changes
+ */
+
+function pushSelection(selection) {
+      window.dataLayer.push({
+      event: 'selectionMade',
+      selectedElement: selection
+    });
+};
+
+function selectionListener() {
+  
+  $('select').change(function(){
+    var selectedOption = $(this).children("option:selected").text();
+    pushSelection(selectedOption);
+  });
+};
+
+$(function(){
+  selectionListener();
+});
+
+function pushSubmit() {
+      window.dataLayer.push({
+      event: 'formSubmitted'
+    });
+};
+
+
+$(document).on("formvalid.zf.abide", function(ev,frm) {
+    pushSubmit();
+  });
+
 
 //let input_selector =
 //  'input[type=text], input[type=password], input[type=email], input[type=url], input[type=tel], input[type=number], input[type=search], input[type=date], input[type=time], textarea';
