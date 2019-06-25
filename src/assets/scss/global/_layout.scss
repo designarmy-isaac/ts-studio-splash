@@ -153,3 +153,32 @@ body.fade {
   margin-right: auto;
   width: 100%;
 }
+
+.rel-top {
+  position: relative;
+  top: -5rem;
+}
+
+table.pricing * {
+  background: $white;
+}
+
+table.pricing tbody {
+  border: none;
+}
+
+table.pricing th {
+  border-bottom: 3px solid $black;
+}
+
+table.pricing th:nth-child(2),
+table.pricing td:nth-child(2) {
+  text-align: right;
+}
+table.pricing th:nth-child(1),
+table.pricing td:nth-child(1) {
+  text-align: left;
+}
+table.pricing td {
+  border-top: 1px solid $black;
+}
