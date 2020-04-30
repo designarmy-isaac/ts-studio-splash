@@ -12,7 +12,7 @@
   "dependencies": {
     "aos": "^2.2.0",
     "foundation-sites": "~6.4.1",
-    "jquery": "^3.2.1",
+    "jquery": "^3.5.0",
     "local-web-server": "^2.6.1",
     "motion-ui": "^2.0.3",
     "slick-carousel": "^1.8.1",
